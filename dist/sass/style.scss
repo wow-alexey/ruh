@@ -1,0 +1,95 @@
+// Reset
+@import "reset";
+@import "fonts";
+
+//Unit
+@import "unit/_unit";
+@import "unit/_value";
+@import "unit/_color";
+@import "unit/_selector";
+@import "unit/_flex";
+@import "unit/_breakpoint";
+@import "unit/_mixin";
+
+// Styles
+@import "default-class";
+
+header {
+	font-size: rem-calc(12);
+	position: relative;
+	z-index: 10;
+	background: $white;
+	width: 100%;
+	border-bottom: rem-calc(1) solid $gray;
+	padding: rem-calc(15 0);
+	@include breakpoint(large) {
+		padding: rem-calc(0);
+	}
+	.container, .action-wrapper, .nav-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	nav {
+		position: absolute;
+		z-index: 20;
+		top: 0;
+		right: -80%;
+		width: 80%;
+		background: lightsalmon;
+		height: 100vh;
+		@include breakpoint(large){
+			position: static;
+			height: auto;
+			background: transparent;
+		};
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		@include breakpoint(large){
+			position: static;
+			flex-direction: row;
+		};
+		li {
+			&+li {
+				margin-left: rem-calc(4);
+			}
+		}
+		a {
+			display: inline-block;
+			color: $black;
+
+			border-bottom: rem-calc(4) solid transparent;
+			transition: border-color $transition, color $transition;
+			@include breakpoint(large) {
+				padding: rem-calc(23 4);
+			}
+			&:hover {
+				color: $hover-black;
+				border-color: $black;
+			}
+		}
+	}
+}
+.nav-wrapper {
+	.logo {
+		margin-right: rem-calc(10);
+		@include breakpoint(large){
+			margin-right: rem-calc(37);
+		};
+	}
+}
+.action-wrapper {
+	.button {
+		margin-right: rem-calc(20);
+		@include breakpoint(large) {
+			margin-right: rem-calc(0);
+		}
+	}
+}
+main {
+
+}

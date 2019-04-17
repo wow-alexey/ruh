@@ -1,0 +1,27 @@
+$dark-black: #000;
+$white: #fff;
+$black: #353535;
+$hover-black: #161616;
+$gray: #efefef;
+$light-gray: #eaeaea;
+$fast-transition: .15s ease;
+$transition: .3s ease;
+$slow-transition: .6s ease;
+
+@mixin add-foundation-colors() {
+  @if map-has-key($foundation-palette, primary) {
+    $primary-color: map-get($foundation-palette, primary) !global;
+  }
+  @if map-has-key($foundation-palette, secondary) {
+    $secondary-color: map-get($foundation-palette, secondary) !global;
+  }
+  @if map-has-key($foundation-palette, success) {
+    $success-color: map-get($foundation-palette, success) !global;
+  }
+  @if map-has-key($foundation-palette, warning) {
+    $warning-color: map-get($foundation-palette, warning) !global;
+  }
+  @if map-has-key($foundation-palette, alert) {
+    $alert-color: map-get($foundation-palette, alert) !global;
+  }
+}
