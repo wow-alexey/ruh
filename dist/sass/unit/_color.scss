@@ -4,9 +4,11 @@ $black: #353535;
 $hover-black: #161616;
 $gray: #efefef;
 $light-gray: #eaeaea;
+$gray-font: #ababab;
 $fast-transition: .15s ease;
 $transition: .3s ease;
 $slow-transition: .6s ease;
+$avenir: "Avenir", sans-serif;
 
 @mixin add-foundation-colors() {
   @if map-has-key($foundation-palette, primary) {

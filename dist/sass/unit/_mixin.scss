@@ -91,6 +91,22 @@
     transform: translate(-50%, 0);
     margin-top: calc(#{$lineHeight}px / -2);
   }
+
+  &.opened {
+    &:after, &:before {
+      top: 50%;
+      bottom: auto;
+    }
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    span {
+      opacity: 0;
+    }
+  }
 }
 
 // Placeholder

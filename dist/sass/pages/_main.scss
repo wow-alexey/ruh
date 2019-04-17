@@ -1,0 +1,23 @@
+.main-articles-holder {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: rem-calc(12);
+  border-bottom: rem-calc(1) solid $gray;
+}
+.introduction {
+  border-bottom: rem-calc(1) solid $gray;
+  margin-bottom: rem-calc(15);
+  .video-holder {
+    width: 100%;
+    height: rem-calc(290);
+    @include breakpoint(medium) {
+      height: rem-calc(344);
+    }
+  }
+  h2 {
+    margin: rem-calc(6 0 10);
+    @include breakpoint(medium) {
+      margin: rem-calc(6 0);
+    }
+  }
+}
