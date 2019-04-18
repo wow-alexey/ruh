@@ -1,3 +1,11 @@
+.homepage {
+  .main-holder {
+    @include breakpoint(medium) {
+      border-bottom: rem-calc(1) solid $gray;
+    }
+  }
+}
+
 .main-holder {
   display: flex;
   flex-direction: column;
@@ -5,7 +13,14 @@
     flex-direction: row;
     margin-bottom: rem-calc(12);
     padding-bottom: rem-calc(12);
-    border-bottom: rem-calc(1) solid $gray;
+  }
+  .intro-categories {
+    @include breakpoint(medium) {
+      flex-basis: 50%;
+    }
+    @include breakpoint(large) {
+      flex-basis: 40%;
+    }
   }
 }
 
@@ -28,7 +43,7 @@
     border-right: rem-calc(1) solid $gray;
     flex-basis: 60%;
   }
-  .video-holder, .image-holder{
+  .video-holder, .image-holder {
     width: 100%;
     height: rem-calc(290);
     @include breakpoint(medium) {
@@ -58,12 +73,6 @@
 }
 
 .intro-categories {
-  @include breakpoint(medium) {
-    flex-basis: 50%;
-  }
-  @include breakpoint(large) {
-    flex-basis: 40%;
-  }
   .item {
     padding-bottom: rem-calc(10);
     margin-bottom: rem-calc(10);
@@ -77,6 +86,7 @@
   .top-info {
     display: flex;
     margin-bottom: rem-calc(10);
+    color: inherit;
   }
   .preview {
     width: rem-calc(70);
@@ -109,6 +119,11 @@
     @include breakpoint(large) {
       flex-basis: calc(100% - 110px);
       max-height: rem-calc(100);
+    }
+    .title {
+      @include breakpoint(medium) {
+        margin-bottom: rem-calc(3);
+      }
     }
   }
   .short-description {

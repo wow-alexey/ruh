@@ -1,0 +1,100 @@
+.article-page {
+  .banner-image {
+    width: 100%;
+    height: rem-calc(150);
+    max-width: rem-calc(787);
+    background-size: cover;
+    background-position: center;
+    @include breakpoint(medium) {
+      height: rem-calc(200);
+    }
+    @include breakpoint(large) {
+      height: rem-calc(262);
+    }
+  }
+  article {
+    width: 100%;
+    border-bottom: rem-calc(1) solid $gray;
+    padding-bottom: rem-calc(34);
+    * {
+      width: 100%;
+      max-width: rem-calc(667);
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.3;
+      & + * {
+        margin-top: rem-calc(15);
+        @include breakpoint(medium) {
+          margin-top: rem-calc(21);
+        }
+        @include breakpoint(large) {
+          margin-top: rem-calc(28);
+        }
+      }
+    }
+  }
+  .recommended-articles {
+    padding: rem-calc(20 0);
+    @include breakpoint(medium) {
+      padding: rem-calc(30 0);
+    }
+    @include breakpoint(large) {
+      padding: rem-calc(50 0);
+    }
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include breakpoint(medium) {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+      }
+    }
+    .item {
+      margin: rem-calc(20 0);
+      padding: 0;
+      border: 0;
+      width: 100%;
+      max-width: rem-calc(310);
+      @include breakpoint(medium) {
+        margin: rem-calc(0 15);
+        max-width: rem-calc(200);
+      }
+    }
+    .preview {
+      width: 100%;
+      height: rem-calc(160);
+      margin: rem-calc(0 0 13);
+      @include breakpoint(medium) {
+        height: rem-calc(109);
+      }
+    }
+    .top-info {
+      flex-direction: column;
+      align-items: center;
+    }
+    .description {
+      max-height: none;
+    }
+    .short-description {
+      max-height: rem-calc(96);
+      @include breakpoint(medium) {
+        max-height: rem-calc(91);
+      }
+      @include breakpoint(large) {
+        max-height: rem-calc(93);
+      }
+    }
+    .bottom-info {
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: rem-calc(10);
+      .link {
+        margin-top: rem-calc(5);
+        font-size: rem-calc(12);
+      }
+    }
+  }
+}

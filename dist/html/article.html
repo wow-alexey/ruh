@@ -1,18 +1,23 @@
 @@include('templates/head.html', {
-"title": "Home Page | RUH"
+"title": "Single article | RUH"
 })
 @@include('templates/header.html')
-<main class="homepage">
+<main class="article-page">
     <div class="container">
-        <div class="main-holder">
-            <div class="introduction">
-                <h2>ВАШ НАДЕЖНЫЙ ПАРТНЕР В СФЕРЕ ЮРИДИЧЕСКИХ УСЛУГ</h2>
-                <div class="video-holder">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LXb3EKWsInQ" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                </div>
-            </div>
+        <article>
+            <div class="banner-image" style="background-image: url('img/banner.jpg')"></div>
+            <h3>«Цивилизация привела к тому, что уже не важно, кто прав, а кто не прав; важно, чей адвокат лучше»</h3>
+            <p>В жизни ничего нельзя предвидеть и очень часто различные трудности возникают неожиданно. Профессионализм
+                и многолетний опыт сотрудников Адвокатского объединения «РУХ» в различных отраслях права позволят нам в
+                кратчайшие сроки найти решение даже в самой сложной правовой ситуации.</p>
+            <p>В жизни ничего нельзя предвидеть и очень часто различные трудности возникают неожиданно. Профессионализм
+                и многолетний опыт сотрудников Адвокатского объединения «РУХ» в различных отраслях права позволят нам в
+                кратчайшие сроки найти решение даже в самой сложной правовой ситуации.</p>
+            <p>В жизни ничего нельзя предвидеть и очень часто различные трудности возникают неожиданно. Профессионализм
+                и многолетний опыт сотрудников Адвокатского объединения «РУХ» в различных отраслях права позволят нам в
+                кратчайшие сроки найти решение даже в самой сложной правовой ситуации.</p>
+        </article>
+        <div class="recommended-articles">
             <ul class="intro-categories">
                 <li class="item">
                     <a href="article.html" class="top-info">
@@ -79,30 +84,7 @@
                 </li>
             </ul>
         </div>
-        <div class="pre-footer">
-            <!--no-media class-->
-            <div class="fb-holder">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgoodevs%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1980581345532475"
-                        style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                        allowTransparency="true" allow="encrypted-media"></iframe>
-            </div>
-            <div class="subscribe-block">
-                <div class="quote-block">
-                    <h4>Успех адвокатского объединения - успех клиента.</h4>
-                    <p>Многолетний опыт адвокатской деятельности в сочетании с нестандартным подходом, обеспечит
-                        разработку эффективной линии защиты Вас и Вашего бизнеса с использованием законных правовых
-                        инструментов. Профессионализм наших сотрудников, постоянный контакт с клиентом, гарантирует Вам
-                        спокойный сон даже в сложной ситуации.</p>
-                </div>
-                <form class="subscribe-form">
-                    <div class="h5">Подписаться на новости</div>
-                    <div class="action-holder">
-                        <input type="text" placeholder="E-mail">
-                        <button type="submit">Подписаться</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+
     </div>
 </main>
 @@include('templates/footer.html')

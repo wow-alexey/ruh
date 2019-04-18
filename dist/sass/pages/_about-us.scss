@@ -1,0 +1,28 @@
+.about-us-page {
+  .intro-categories {
+    padding-top: rem-calc(15);
+    @include breakpoint(medium) {
+      padding-top: rem-calc(45);
+    }
+  }
+  .achievements {
+    padding-top: rem-calc(15);
+    @include breakpoint(medium) {
+      padding-top: rem-calc(45);
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      line-height: 1.4;
+      padding-bottom: rem-calc(15);
+      margin-bottom: rem-calc(15);
+      &:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+    .image-holder {
+      margin-right: rem-calc(29);
+    }
+  }
+}
