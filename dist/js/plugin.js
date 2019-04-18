@@ -1,6 +1,6 @@
 $('.burger').on('click', function() {
     $('header nav').toggleClass('opened');
-    $('body').toggleClass('hide-overflow');
+    $('body, html').toggleClass('hide-overflow');
 });
 
 $('nav a').on('click', function () {
@@ -10,17 +10,18 @@ $('nav a').on('click', function () {
 });
 
 //accordion
-var acc = document.getElementsByClassName("accordion");
-var i;
+$('.accordion').click(function(e) {
+    e.preventDefault();
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight){
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    });
-}
+    var $this = $(this);
+
+    if ($this.next().hasClass('show')) {
+        $this.next().removeClass('show');
+        $this.next().slideUp(350);
+    } else {
+        $this.parent().parent().find('li .panel').removeClass('show');
+        $this.parent().parent().find('li .panel').slideUp(350);
+        $this.next().toggleClass('show');
+        $this.next().slideToggle(350);
+    }
+});

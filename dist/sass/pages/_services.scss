@@ -2,7 +2,13 @@
   .services-main {
     max-width: rem-calc(620);
     text-align: center;
-    margin: 0 auto rem-calc(100);
+    margin: rem-calc(30) auto rem-calc(40);
+    @include breakpoint(medium){
+      margin: rem-calc(50) auto rem-calc(70);
+    }
+    @include breakpoint(large){
+      margin: rem-calc(70) auto rem-calc(100);
+    }
   }
   .quote-holder {
     margin-bottom: rem-calc(46);
@@ -24,9 +30,9 @@
   }
 
   .accordion {
-    color: #444;
+    position: relative;
     cursor: pointer;
-    padding: 18px;
+    padding: rem-calc(18 35 18 18);
     width: 100%;
     text-align: left;
     outline: none;
@@ -35,15 +41,18 @@
   }
 
   .accordion:after {
+    position: absolute;
+    right: rem-calc(15);
+    top: 50%;
     content: '';
-    color: #777;
+    color: $gray;
     font-weight: bold;
     float: right;
     width: rem-calc(8);
     height: rem-calc(8);
     border-right: rem-calc(2) solid $gray;
     border-bottom: rem-calc(2) solid $gray;
-    transform: rotate(45deg);
+    transform: translateY(-75%) rotate(45deg);
     margin: 0;
   }
 
@@ -52,10 +61,12 @@
   }
 
   .panel {
-    padding: rem-calc(20);
+    text-align: left;
+    display: none;
+    padding: rem-calc(10 20 20);
     background-color: white;
-    max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    line-height: 1.3;
   }
 }
