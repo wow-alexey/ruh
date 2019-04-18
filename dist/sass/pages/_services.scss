@@ -1,0 +1,61 @@
+.services-page {
+  .services-main {
+    max-width: rem-calc(620);
+    text-align: center;
+    margin: 0 auto rem-calc(100);
+  }
+  .quote-holder {
+    margin-bottom: rem-calc(46);
+    p {
+      text-align: justify;
+      letter-spacing: rem-calc(.91);
+      line-height: 1.4;
+    }
+  }
+
+  .services-holder {
+    margin-top: rem-calc(46);
+    .item {
+      border: rem-calc(1) solid $gray;
+      &+.item {
+        border-top: 0;
+      }
+    }
+  }
+
+  .accordion {
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+
+  .accordion:after {
+    content: '';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    width: rem-calc(8);
+    height: rem-calc(8);
+    border-right: rem-calc(2) solid $gray;
+    border-bottom: rem-calc(2) solid $gray;
+    transform: rotate(45deg);
+    margin: 0;
+  }
+
+  .active:after {
+    transform: rotate(-135deg);
+  }
+
+  .panel {
+    padding: rem-calc(20);
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+}

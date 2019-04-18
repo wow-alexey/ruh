@@ -4,7 +4,9 @@ uglify = require('gulp-uglifyjs'),
 concat = require('gulp-concat'),
 tinypng = require('gulp-tinypng'),
 babel = require('gulp-babel'),
-fileinclude = require('gulp-file-include');
+fileinclude = require('gulp-file-include'),
+browserSync = require('browser-sync'),
+reload = browserSync.reload;
 
 gulp.task('fileinclude', function() {
     return gulp.src(['dist/html/**/*.html'])
@@ -41,10 +43,19 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('app/js'));
 });
 
-gulp.task('watch', ['sass', 'scripts', 'fileinclude'], function () {
+gulp.task('browser-sync', function() {
+    browserSync.init(["css/*.css", "js/*.js", "*.html"], {
+        server: {
+            baseDir: "app"
+        }
+    });
+});
+
+gulp.task('watch', ['sass', 'scripts', 'fileinclude', 'browser-sync'], function () {
     gulp.watch('dist/sass/**/*.scss', ['sass']);
     gulp.watch('dist/js/*.js', ['scripts']);
     gulp.watch('dist/**/*.html', ['fileinclude']);
+    gulp.watch(['app/**'], reload);
 });
 
 

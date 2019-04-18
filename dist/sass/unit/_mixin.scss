@@ -7,7 +7,7 @@
       height: $height;
       margin-left: $margin;
       vertical-align: $align;
-      background: url('../images/#{$name}-icon.svg') no-repeat center / $width $height;
+      background: url('../img/#{$name}-icon.svg') no-repeat center / $width $height;
       content: '';
     }
   }
@@ -18,7 +18,7 @@
       height: $height;
       margin-right: $margin;
       vertical-align: $align;
-      background: url('../images/#{$name}-icon.svg') no-repeat center / $width $height;
+      background: url('../img/#{$name}-icon.svg') no-repeat center / $width $height;
       content: '';
     }
   }
@@ -27,13 +27,13 @@
     width: $width;
     height: $height;
     vertical-align: $align;
-    background: url('../images/#{$name}-icon.svg') no-repeat center / $width $height;
+    background: url('../img/#{$name}-icon.svg') no-repeat center / $width $height;
   }
   @if ($position == absolute) {
     position: relative;
     &:before {
       content: '';
-      background: url('../images/#{$name}-icon.svg') no-repeat center / $width $height;
+      background: url('../img/#{$name}-icon.svg') no-repeat center / $width $height;
       position: absolute;
       display: inline-block;
       width: $width;
@@ -55,9 +55,9 @@
   @include breakpoint(xxlarge){
     max-width: rem-calc(1400);
   }
-  @include breakpoint(xxxlarge){
-    max-width: rem-calc(1650);
-  }
+  //@include breakpoint(xxxlarge){
+  //  max-width: rem-calc(1650);
+  //}
 }
 
 // burger
@@ -122,5 +122,27 @@
   }
   &:-ms-input-placeholder {
     @content
+  }
+}
+
+// Placeholder
+@mixin left-line {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: rem-calc(-15);
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem-calc(4);
+    background: $black;
+    @include breakpoint(medium) {
+      left: rem-calc(-20);
+      width: rem-calc(6);
+    }
+    @include breakpoint(large) {
+      left: rem-calc(-32);
+    }
   }
 }

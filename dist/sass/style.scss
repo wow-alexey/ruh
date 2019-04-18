@@ -13,9 +13,9 @@
 @import "default-class";
 // pages
 @import "pages/_main";
+@import "pages/_services";
 
 header {
-
   position: relative;
   z-index: 10;
   background: $white;
@@ -39,7 +39,7 @@ header {
     background: $white;
     height: 100vh;
     padding: rem-calc(15 20);
-    transition: box-shadow $transition;
+    transition: box-shadow $transition, right $slow-transition;
     @include breakpoint(large) {
       width: auto;
       position: static;
@@ -48,10 +48,11 @@ header {
       padding: 0;
       box-shadow: none !important;
     }
-    .opened & {
+    &.opened {
       -webkit-box-shadow: -8px 0px 60px 0px rgba(0, 0, 0, 0.3);
       -moz-box-shadow: -8px 0px 60px 0px rgba(0, 0, 0, 0.3);
       box-shadow: -8px 0px 60px 0px rgba(0, 0, 0, 0.3);
+      right: 0;
     }
   }
   ul {
@@ -120,7 +121,7 @@ header {
   margin-bottom: rem-calc(40);
 }
 
-.btn-holder {
+.btn-menu-holder {
   position: absolute;
   left: 50%;
   bottom: rem-calc(30);
