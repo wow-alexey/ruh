@@ -1,0 +1,159 @@
+@@include('templates/head.html', {
+"title": "All articles | RUH"
+})
+@@include('templates/header.html')
+<main class="all-articles">
+    <div class="container">
+        <div class="main-holder">
+            <div class="introduction">
+                <!--This content will change with tabs-->
+                <div class="featured-news">
+                    <div class="banner">
+                        <img src="img/sud.jpg" alt="sud-image">
+                    </div>
+                    <h3>«Цивилизация привела к тому, что уже не важно, кто прав, а кто не прав; важно, чей адвокат
+                        лучше»</h3>
+                </div>
+                <ul class="main-articles">
+                    <li class="item">
+                        <a href="article.html" class="top-info">
+                            <div class="preview">
+                                <img src="img/test.jpg" alt="Preview">
+                            </div>
+                            <div class="description">
+                                <h3 class="title">Информация для выезда ребенка за границу</h3>
+                                <div class="short-description">
+                                    <p>В отдельных случаях в заграничное путешествие с … детьми имеют возможность
+                                        поехать
+                                        или папа, или мама, а иногда лишь дедушка и / или бабушка, или няня,
+                                        руководители
+                                        танцевального коллектива, тренер спортивной команды, в составе школьной
+                                        экскурсии, и
+                                        тому подобное. Возникаєт вопрос сбора документов, которые санкционируют выезд
+                                        ребенка за границу с лицами, которые его сопровождают.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="bottom-info">
+                            <time>23 Марта 2019 - 15:29</time>
+                            <a href="#" class="link">Читать статью</a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a href="article.html" class="top-info">
+                            <div class="preview">
+                                <img src="img/test.jpg" alt="Preview">
+                            </div>
+                            <div class="description">
+                                <h3 class="title">Информация для выезда ребенка за границу</h3>
+                                <div class="short-description">
+                                    <p>В отдельных случаях в заграничное путешествие с … детьми имеют возможность
+                                        поехать
+                                        или папа, или мама, а иногда лишь дедушка и / или бабушка, или няня,
+                                        руководители
+                                        танцевального коллектива, тренер спортивной команды, в составе школьной
+                                        экскурсии, и
+                                        тому подобное. Возникаєт вопрос сбора документов, которые санкционируют выезд
+                                        ребенка за границу с лицами, которые его сопровождают.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="bottom-info">
+                            <time>23 Марта 2019 - 15:29</time>
+                            <a href="#" class="link">Читать статью</a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a href="article.html" class="top-info">
+                            <div class="preview">
+                                <img src="img/test.jpg" alt="Preview">
+                            </div>
+                            <div class="description">
+                                <h3 class="title">Информация для выезда ребенка за границу</h3>
+                                <div class="short-description">
+                                    <p>В отдельных случаях в заграничное путешествие с … детьми имеют возможность
+                                        поехать
+                                        или папа, или мама, а иногда лишь дедушка и / или бабушка, или няня,
+                                        руководители
+                                        танцевального коллектива, тренер спортивной команды, в составе школьной
+                                        экскурсии, и
+                                        тому подобное. Возникаєт вопрос сбора документов, которые санкционируют выезд
+                                        ребенка за границу с лицами, которые его сопровождают.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="bottom-info">
+                            <time>23 Марта 2019 - 15:29</time>
+                            <a href="#" class="link">Читать статью</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="pagination center">
+                    <li class="page-item disabled">
+                        <span class="page-link arrow prev" title="Back"></span>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item active">
+                        <span class="sr-only">2</span>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link arrow next" href="#" title="Next"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="intro-categories align-center">
+                <div class="tabs-holder">
+                    <div class="current-tab accordion">Все новости</div>
+                    <ul class="tabs panel">
+                        <li class="active">Все новости</li>
+                        <li>Аналитические статьи</li>
+                        <li>Правовые консультации</li>
+                        <li>Интервью</li>
+                        <li>Результаты опросов</li>
+                    </ul>
+                </div>
+                <div class="container--tabs">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab-1">Facebook</a></li>
+                        <li class=""><a href="#tab-2">Instagram</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane active">
+                            <iframe width="340px" height="100%" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgoodevs%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1980581345532475"
+                                    style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                                    allowTransparency="true" allow="encrypted-media"></iframe>
+                        </div>
+                        <div id="tab-2" class="tab-pane">
+                            <iframe width="340px" height="100%" src="https://www.instagram.com/p/BqF83rfAmyN/embed" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="for-tabs-container"></div>
+        <div class="pre-footer no-media ">
+            <div class="subscribe-block">
+                <div class="quote-block">
+                    <h4>Успех адвокатского объединения - успех клиента.</h4>
+                    <p>Многолетний опыт адвокатской деятельности в сочетании с нестандартным подходом, обеспечит
+                        разработку эффективной линии защиты Вас и Вашего бизнеса с использованием законных правовых
+                        инструментов. Профессионализм наших сотрудников, постоянный контакт с клиентом, гарантирует Вам
+                        спокойный сон даже в сложной ситуации.</p>
+                </div>
+                <form class="subscribe-form">
+                    <div class="h5">Подписаться на новости</div>
+                    <div class="action-holder">
+                        <input type="text" placeholder="E-mail">
+                        <button type="submit">Подписаться</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+@@include('templates/footer.html')

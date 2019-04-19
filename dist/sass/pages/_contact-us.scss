@@ -1,7 +1,28 @@
 .contact-us {
-  .introduction {
+  .main-holder {
+    margin-bottom: rem-calc(30);
     @include breakpoint(medium) {
+      margin-bottom: rem-calc(40);
+    }
+  }
+  .introduction {
+    margin-bottom: rem-calc(30);
+    @include breakpoint(medium) {
+      margin-bottom: 0;
       flex-basis: 60%;
+    }
+    h4, .h4 {
+      padding-left: rem-calc(10);
+      margin: rem-calc(0 0 20 15);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @include breakpoint(medium) {
+        margin: rem-calc(0 0 50 20);
+      }
+      @include breakpoint(large) {
+        margin: rem-calc(0 0 50 32);
+      }
     }
   }
   .intro-categories {
@@ -10,7 +31,7 @@
     }
   }
   .action-holder {
-    @include breakpoint(medium){
+    @include breakpoint(medium) {
       max-width: rem-calc(285);
       margin-left: auto;
       margin-right: auto;
@@ -18,8 +39,29 @@
     button {
       width: 100%;
     }
-    &+.action-holder {
+    & + .action-holder {
       margin-top: rem-calc(22);
+    }
+  }
+  .tel {
+    @include icon(tel, 18px, 18px, left, 27px, top);
+    font-size: rem-calc(17);
+    font-weight: 400;
+    margin-top: rem-calc(20);
+  }
+  address {
+    @include icon(pin, 14px, 20px, left, 27px, top);
+    display: flex;
+    align-items: center;
+    font-size: rem-calc(14);
+    font-weight: 400;
+    margin-top: rem-calc(20);
+    p {
+      display: flex;
+      flex-direction: column;
+    }
+    span + span {
+      margin-top: rem-calc(5);
     }
   }
 }
