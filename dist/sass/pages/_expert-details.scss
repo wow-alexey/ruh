@@ -1,0 +1,126 @@
+.expert-details {
+  .expert-name {
+    text-transform: none;
+    font-size: rem-calc(20);
+    font-weight: 400;
+    margin-bottom: rem-calc(29);
+    a {
+      opacity: .7;
+    }
+  }
+  .name {
+    margin: 0;
+    max-width: none;
+    font-size: rem-calc(16);
+  }
+  .avatar {
+    cursor: auto;
+    margin-bottom: rem-calc(14);
+    margin-right: auto;
+    margin-left: auto;
+    @include breakpoint(large) {
+      margin-left: 0;
+    }
+  }
+  .expert-ava {
+    text-align: center;
+    margin-bottom: rem-calc(15);
+    @include breakpoint(large) {
+      margin-bottom: 0;
+      text-align: left;
+      margin-right: rem-calc(19);
+    }
+  }
+  .expert-description {
+    line-height: 1.4;
+    > * {
+      & + * {
+        margin-top: rem-calc(15);
+        @include breakpoint(large) {
+          margin-top: rem-calc(25);
+        }
+      }
+    }
+  }
+  .specialisation {
+    cursor: auto;
+    border-top: 0;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    @include breakpoint(large) {
+      margin-left: 0;
+    }
+    .title {
+      opacity: 1;
+      padding: 0;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+  }
+  .expert-services {
+    .title {
+      font-size: rem-calc(14);
+      font-weight: 600;
+      display: inline-block;
+      margin-left: rem-calc(7);
+      @include breakpoint(large) {
+        margin-left: 0;
+      }
+    }
+  }
+  .expert-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem-calc(20);
+    @include breakpoint(large) {
+      flex-direction: row;
+      margin-bottom: rem-calc(30);
+    }
+  }
+  .accordion {
+    padding-left: rem-calc(7);
+    @include breakpoint(large) {
+      padding-left: rem-calc(18);
+    }
+  }
+  .main-holder {
+    @include breakpoint(medium) {
+      margin-bottom: rem-calc(46);
+    }
+  }
+  .intro-categories {
+    @include breakpoint(medium) {
+      flex-basis: 40%;
+    }
+    .title {
+      font-size: rem-calc(16);
+      font-weight: 600;
+      margin-top: rem-calc(20);
+      @include breakpoint(medium) {
+        margin-top: rem-calc(66);
+      }
+    }
+  }
+  .introduction {
+    border-bottom: 0;
+    @include breakpoint(medium) {
+      flex-basis: 60%;
+    }
+  }
+  .consultation {
+    margin-top: rem-calc(20);
+    @include breakpoint(medium) {
+      margin-top: rem-calc(48);
+      max-width: rem-calc(285);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    * {
+      width: 100%;
+      &+* {
+        margin-top: rem-calc(8);
+      }
+    }
+  }
+}

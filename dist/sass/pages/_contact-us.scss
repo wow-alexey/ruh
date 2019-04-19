@@ -1,0 +1,25 @@
+.contact-us {
+  .introduction {
+    @include breakpoint(medium) {
+      flex-basis: 60%;
+    }
+  }
+  .intro-categories {
+    @include breakpoint(medium) {
+      flex-basis: 40%;
+    }
+  }
+  .action-holder {
+    @include breakpoint(medium){
+      max-width: rem-calc(285);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    button {
+      width: 100%;
+    }
+    &+.action-holder {
+      margin-top: rem-calc(22);
+    }
+  }
+}

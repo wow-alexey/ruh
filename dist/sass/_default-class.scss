@@ -14,14 +14,11 @@ body {
   }
 }
 
-.hide-overflow {
-  overflow-y: hidden;
-}
-
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 700;
   letter-spacing: rem-calc(.51);
+  color: inherit;
 }
 
 .h2, h2 {
@@ -80,22 +77,6 @@ blockquote {
   text-align: left;
 }
 
-.general-container {
-  //$size: -75%;
-  //transition: transform $slow-transition;
-  //&.opened {
-  //  transform: translateX($size);
-  //  @include breakpoint(large) {
-  //    transform: translateX(0);
-  //  }
-  //}
-}
-
-.container {
-  padding: 0 rem-calc(15);
-  @include containers;
-}
-
 input {
   outline: none;
   background: $input-bg;
@@ -104,11 +85,28 @@ input {
   border-radius: rem-calc(3);
   padding: rem-calc(11 17);
   width: 100%;
+  box-sizing: border-box;
   @include placeholder() {
     font-family: $avenir;
     color: $input-color;
   }
-;
+}
+textarea {
+  box-shadow: 0 6px 30px 1px rgba(0, 0, 0, 0.05);
+  border-radius: rem-calc(3);
+  border: 1px solid #e9e9e9;
+  background-color: #ffffff;
+  height: rem-calc(169);
+  resize: none;
+  outline: none;
+  font-family: $avenir;
+  padding: rem-calc(11 17);
+  width: 100%;
+  box-sizing: border-box;
+  @include placeholder() {
+    font-family: $avenir;
+    color: $input-color;
+  }
 }
 
 button, .button {
@@ -149,56 +147,18 @@ button, .button {
   &:hover {
     border-color: $black;
     color: $white;
+    input {
+      color: $white;
+    }
     &:after {
       opacity: 1;
       width: 105%;
     }
   }
-}
-
-.logo {
-  display: inline-block;
-  width: rem-calc(88);
-  height: rem-calc(33);
-  @include breakpoint(large) {
-    width: rem-calc(130);
-    height: rem-calc(50);
-  }
-  img {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.show-mob {
-  @include breakpoint(large) {
-    display: none !important;
-  }
-}
-
-.burger {
-  @include burger(26, 15, 3);
-}
-
-.link {
-  display: inline-block;
-  color: $gold;
-  position: relative;
-  padding-bottom: rem-calc(1);
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: rem-calc(1);
-    background: $gold;
-    transition: width $transition;
-  }
-  &:hover {
-    &:after {
-      width: 100%;
-    }
+  input {
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
   }
 }
 
@@ -206,120 +166,4 @@ time {
   display: inline-block;
   vertical-align: top;
   @include icon(calendar, 11px, 13px, left, 8px, bottom);
-}
-
-.pre-footer {
-  margin-top: rem-calc(20);
-  @include breakpoint(medium) {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-    max-width: rem-calc(1000);
-    margin-left: auto;
-    margin-right: auto;
-  }
-  &.no-media {
-    @include breakpoint(medium) {
-      display: block;
-    }
-  }
-}
-
-.fb-holder {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  @include breakpoint(medium) {
-    width: rem-calc(340);
-  }
-  iframe {
-    width: 100%;
-    max-width: rem-calc(340);
-    height: rem-calc(400);
-  }
-}
-
-.subscribe-block {
-  margin-top: rem-calc(20);
-  @include breakpoint(medium) {
-    margin-top: 0;
-    padding-left: rem-calc(20);
-    flex-basis: calc(100% - 350px);
-  }
-  @include breakpoint(large) {
-    padding-left: rem-calc(32);
-    flex-basis: calc(100% - 390px);
-  }
-  .subscribe-form {
-    max-width: rem-calc(340);
-    margin: 0 auto;
-    padding: rem-calc(15);
-    border: rem-calc(1) solid $gray;
-    @include breakpoint(medium) {
-      max-width: rem-calc(401);
-      margin: 0;
-      padding: rem-calc(26 19);
-    }
-  }
-  .action-holder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    @include breakpoint(large) {
-      flex-direction: row;
-    }
-    * {
-      max-width: rem-calc(200);
-      box-sizing: border-box;
-      @include breakpoint(large) {
-        max-width: rem-calc(172);
-      }
-      & + * {
-        width: 100%;
-        margin-top: rem-calc(10);
-        @include breakpoint(large) {
-          margin-top: 0;
-          margin-left: rem-calc(19);
-        }
-      }
-    }
-  }
-
-  .no-media & {
-    @include breakpoint(medium) {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 0;
-      max-width: rem-calc(940);
-      margin: 0 auto;
-    }
-  }
-}
-
-.quote-block {
-  padding-left: rem-calc(15);
-  margin-bottom: rem-calc(20);
-  @include breakpoint(medium) {
-    padding-left: 0;
-    line-height: 1.3;
-    max-width: rem-calc(500);
-  }
-  @include breakpoint(large) {
-    max-width: rem-calc(600);
-  }
-  .no-media & {
-    @include breakpoint(medium) {
-      padding-left: rem-calc(20);
-      max-width: rem-calc(459);
-    }
-    @include breakpoint(medium) {
-      padding-left: rem-calc(32);
-      max-width: rem-calc(459);
-
-    }
-  }
 }

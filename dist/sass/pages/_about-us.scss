@@ -1,7 +1,16 @@
 .about-us-page {
+  .introduction {
+    @include breakpoint(medium) {
+      flex-basis: 60%;
+    }
+  }
   .intro-categories {
     padding-top: rem-calc(15);
     @include breakpoint(medium) {
+      padding-top: rem-calc(6);
+      flex-basis: 40%;
+    }
+    @include breakpoint(large) {
       padding-top: rem-calc(45);
     }
   }
@@ -24,5 +33,17 @@
     .image-holder {
       margin-right: rem-calc(29);
     }
+  }
+  .main-holder {
+    margin-bottom: rem-calc(35);
+    @include breakpoint(medium) {
+      margin-bottom: rem-calc(50);
+    }
+    @include breakpoint(large) {
+      margin-bottom: rem-calc(70);
+    }
+  }
+  .people-holder {
+    margin-bottom: rem-calc(15);
   }
 }

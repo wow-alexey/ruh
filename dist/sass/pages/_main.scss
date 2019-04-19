@@ -64,7 +64,7 @@
       object-fit: cover;
     }
   }
-  h2 {
+  h2, .h2 {
     margin: rem-calc(6 0 10);
     @include breakpoint(medium) {
       margin: rem-calc(6 0);

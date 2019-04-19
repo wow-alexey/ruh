@@ -1,0 +1,96 @@
+@@include('templates/head.html', {
+"title": "Expert details | RUH"
+})
+@@include('templates/header.html')
+<main class="expert-details">
+    <div class="container">
+        <div class="main-holder">
+            <div class="introduction">
+                <h2 class="expert-name"><a href="all-experts.html">Наши эксперты &#183; </a>Ус Вячеслав Эдуардович</h2>
+                <div class="expert-info">
+                    <div class="expert-ava">
+                        <div class="avatar"
+                             style="background-image: url('img/ava.png')">
+                        </div>
+                        <span class="name">Ус Вячеслав Эдуардович</span>
+                    </div>
+                    <div class="expert-description">
+                        <p>Адвокат, управляющий партнер адвокатского объединения «РУХ», заместитель Председателя
+                            Регионального отделения Союза адвокатов Украины, заместитель Председателя Харьковской
+                            областной коллегии адвокатов, член ревизионной комиссии адвокатуры Украины, имеет стаж
+                            работы адвокатом 27 лет.</p>
+                        <div class="specialisation">
+                            <span class="title">Специализация</span>
+                            <p>Адвокат, член Президиума Харьковской областной коллегии
+                                адвокатов,
+                                член
+                                ревизионной комиссии Союза адвокатов Украины, имеет стаж работы в адвокатуре 18 лет;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="expert-services square-items">
+                    <div class="title">Услуги</div>
+                    <ul class="services-holder">
+                        <li class="item">
+                            <div class="accordion">Помощь и поддержка квалифицированных и дипломированных адвокатов</div>
+                            <div class="panel">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </li>
+
+                        <li class="item">
+                            <div class="accordion">Быстрое решение любой проблемы</div>
+                            <div class="panel">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </li>
+
+                        <li class="item">
+                            <div class="accordion">Индивидуальный и оптимальный подход к каждому делу.</div>
+                            <div class="panel">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="intro-categories align-center">
+                <div class="title">Записаться на консультацию</div>
+                <form class="consultation">
+                    <input type="text" placeholder="Номер телефона">
+                    <input type="email" placeholder="Email">
+                    <button type="submit">
+                        Отправить
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="pre-footer no-media ">
+            <div class="subscribe-block">
+                <div class="quote-block">
+                    <h4>Успех адвокатского объединения - успех клиента.</h4>
+                    <p>Многолетний опыт адвокатской деятельности в сочетании с нестандартным подходом, обеспечит
+                        разработку эффективной линии защиты Вас и Вашего бизнеса с использованием законных правовых
+                        инструментов. Профессионализм наших сотрудников, постоянный контакт с клиентом, гарантирует Вам
+                        спокойный сон даже в сложной ситуации.</p>
+                </div>
+                <form class="subscribe-form">
+                    <div class="h5">Подписаться на новости</div>
+                    <div class="action-holder">
+                        <input type="text" placeholder="E-mail">
+                        <button type="submit">Подписаться</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+@@include('templates/footer.html')

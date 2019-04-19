@@ -1,0 +1,59 @@
+@@include('templates/head.html', {
+"title": "Contact us | RUH"
+})
+@@include('templates/header.html')
+<main class="contact-us">
+    <div class="container">
+        <div class="main-holder">
+            <div class="introduction">
+                <div class="h4">
+                    Контакты
+                </div>
+            </div>
+            <div class="intro-categories align-center">
+                <form class="consultation">
+                    <div class="action-holder">
+                        <label for="name">Ваше имя</label>
+                        <input id="name" type="text" placeholder="Имя">
+                    </div>
+                    <div class="action-holder">
+                        <label for="phone">Ваш телефон</label>
+                        <input id="phone" type="text" placeholder="Номер телефона">
+                    </div>
+                    <div class="action-holder">
+                        <label for="email">Ваш e-mail</label>
+                        <input id="email" type="email" placeholder="E-mail">
+                    </div>
+                    <div class="action-holder">
+                        <label for="question">Ваш вопрос</label>
+                        <textarea id="question" placeholder="Необходима консультация"></textarea>
+                    </div>
+                    <div class="action-holder">
+                        <button type="submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="pre-footer no-media ">
+            <div class="subscribe-block">
+                <div class="quote-block">
+                    <h4>Успех адвокатского объединения - успех клиента.</h4>
+                    <p>Многолетний опыт адвокатской деятельности в сочетании с нестандартным подходом, обеспечит
+                        разработку эффективной линии защиты Вас и Вашего бизнеса с использованием законных правовых
+                        инструментов. Профессионализм наших сотрудников, постоянный контакт с клиентом, гарантирует Вам
+                        спокойный сон даже в сложной ситуации.</p>
+                </div>
+                <form class="subscribe-form">
+                    <div class="h5">Подписаться на новости</div>
+                    <div class="action-holder">
+                        <input type="text" placeholder="E-mail">
+                        <button type="submit">Подписаться</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+@@include('templates/footer.html')

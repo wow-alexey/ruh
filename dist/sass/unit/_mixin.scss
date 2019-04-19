@@ -30,7 +30,6 @@
     background: url('../img/#{$name}-icon.svg') no-repeat center / $width $height;
   }
   @if ($position == absolute) {
-    position: relative;
     &:before {
       content: '';
       background: url('../img/#{$name}-icon.svg') no-repeat center / $width $height;
