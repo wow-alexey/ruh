@@ -46,10 +46,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      flex-wrap: wrap;
       @include breakpoint(medium) {
         flex-direction: row;
         align-items: flex-start;
-        justify-content: space-around;
+        justify-content: flex-start;
       }
     }
     .item {
@@ -57,9 +58,22 @@
       padding: 0;
       border: 0;
       width: 100%;
+      @include breakpoint(medium) {
+        margin: rem-calc(0 10 25);
+        width: calc(33.33% - 20px);
+      }
+      @include breakpoint(large) {
+        margin: rem-calc(0 10 35);
+        width: calc(25% - 20px);
+      }
+      @include breakpoint(xxlarge) {
+        width: calc(20% - 20px);
+      }
+    }
+    .content-holder {
+      margin: 0 auto;
       max-width: rem-calc(310);
       @include breakpoint(medium) {
-        margin: rem-calc(0 15);
         max-width: rem-calc(200);
       }
     }
@@ -91,10 +105,10 @@
       flex-direction: column;
       align-items: flex-start;
       font-size: rem-calc(10);
-      .link {
-        margin-top: rem-calc(5);
-        font-size: rem-calc(12);
-      }
+    }
+    .link {
+      margin-top: rem-calc(5);
+      font-size: rem-calc(12);
     }
   }
 }

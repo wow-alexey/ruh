@@ -1,5 +1,5 @@
 $('.burger').on('click', function() {
-    $('header nav').toggleClass('opened');
+    $('body').toggleClass('opened');
     $('body, html').toggleClass('hide-overflow');
 });
 

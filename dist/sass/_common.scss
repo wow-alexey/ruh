@@ -53,13 +53,15 @@
 }
 
 .pre-footer {
+  padding: rem-calc(0 15);
   margin-top: rem-calc(20);
+  @include containers;
   @include breakpoint(medium) {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    max-width: rem-calc(1000);
+    //max-width: rem-calc(1000);
     margin-left: auto;
     margin-right: auto;
   }
@@ -137,7 +139,7 @@
       justify-content: space-between;
       align-items: flex-start;
       padding: 0;
-      max-width: rem-calc(940);
+      //max-width: rem-calc(940);
       margin: 0 auto;
     }
   }
@@ -156,13 +158,12 @@
   }
   .no-media & {
     @include breakpoint(medium) {
+      margin-left: rem-calc(15);
       padding-left: rem-calc(20);
       max-width: rem-calc(459);
     }
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       padding-left: rem-calc(32);
-      max-width: rem-calc(459);
-
     }
   }
 }
@@ -188,6 +189,7 @@ header {
     justify-content: space-between;
   }
   nav {
+    overflow-y: hidden;
     position: absolute;
     z-index: 20;
     top: 0;
@@ -205,11 +207,11 @@ header {
       padding: 0;
       box-shadow: none !important;
     }
-    &.opened {
+    .opened & {
       -webkit-box-shadow: -8px 0px 60px 0px rgba(0, 0, 0, 0.3);
       -moz-box-shadow: -8px 0px 60px 0px rgba(0, 0, 0, 0.3);
       box-shadow: -8px 0px 60px 0px rgba(0, 0, 0, 0.3);
-      right: 0;
+      //right: 0;
     }
   }
   ul {
@@ -238,7 +240,7 @@ header {
       }
       & + li {
         @include breakpoint(large) {
-          margin-left: rem-calc(4);
+          margin-left: rem-calc(31);
         }
       }
     }
@@ -246,13 +248,13 @@ header {
       width: 100%;
       display: inline-block;
       color: $black;
-      padding: rem-calc(10 8);
+      padding: rem-calc(18 8);
       font-size: rem-calc(14);
       transition: border-color $transition, color $transition;
       text-align: center;
       @include breakpoint(large) {
         font-size: rem-calc(12);
-        padding: rem-calc(23 4);
+        padding: rem-calc(33 4);
         width: auto;
         border-bottom: rem-calc(4) solid transparent;
       }
@@ -281,8 +283,9 @@ header {
 .btn-menu-holder {
   position: absolute;
   left: 50%;
-  bottom: rem-calc(30);
+  bottom: 0;
   transform: translateX(-50%);
+  margin-bottom: rem-calc(65);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -393,13 +396,14 @@ footer {
       li + li {
         margin-left: rem-calc(20);
       }
-      a {
-        padding: rem-calc(8 0);
-        border-bottom: 0;
-        color: $black;
-        &:hover, &.active {
-          color: $hover-black;
-        }
+    }
+    a {
+      padding: rem-calc(8 0);
+      border-bottom: 0;
+      color: $black;
+      &:hover, &.active {
+        color: $hover-black;
+        text-decoration: underline;
       }
     }
   }
@@ -506,9 +510,9 @@ footer {
     }
   }
   .title {
-    padding: rem-calc(0 20 0 10);
-    line-height: 1.8;
-    font-size: rem-calc(17);
+    padding: rem-calc(0 25 0 15);
+    line-height: 2.5;
+    font-size: rem-calc(16);
     position: relative;
     opacity: .6;
     transition: opacity $transition;
@@ -522,13 +526,13 @@ footer {
   text-align: left;
   box-shadow: rem-calc(0 19 39) rgba(0, 0, 0, 0.06);
   background-color: #ffffff;
-  padding: rem-calc(11 9 16);
+  padding: rem-calc(11 12 16);
   position: absolute;
   left: 0;
   width: 100%;
-  top: rem-calc(25);
+  top: rem-calc(32);
   display: none;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
 .clients {
@@ -595,7 +599,7 @@ footer {
   width: 100%;
   height: rem-calc(344);
   @include breakpoint(medium) {
-    max-width: rem-calc(459);
+    //max-width: rem-calc(459);
   }
 }
 

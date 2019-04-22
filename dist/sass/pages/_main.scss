@@ -47,13 +47,10 @@
     width: 100%;
     height: rem-calc(290);
     @include breakpoint(medium) {
-      height: rem-calc(300);
-    }
-    @include breakpoint(large) {
-      height: rem-calc(344);
+      height: rem-calc(400);
     }
     @include breakpoint(xlarge) {
-      height: rem-calc(400);
+      height: rem-calc(450);
     }
     @include breakpoint(xxlarge) {
       height: rem-calc(500);
