@@ -16,6 +16,8 @@ $transition: .3s ease;
 $slow-transition: .6s ease;
 $avenir: "Avenir", sans-serif;
 
+$box-shadow: rem-calc(0 6 30 1) rgba(0, 0, 0, 0.05);
+
 @mixin add-foundation-colors() {
   @if map-has-key($foundation-palette, primary) {
     $primary-color: map-get($foundation-palette, primary) !global;

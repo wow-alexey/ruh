@@ -101,10 +101,9 @@ input, textarea{
     color: $input-color;
   }
   &:focus {
-    box-shadow: 0 6px 30px 1px rgba(0, 0, 0, 0.05);
+   box-shadow: $box-shadow;
     background-color: $white;
     border-color: $border-color;
-
   }
 }
 
@@ -124,13 +123,13 @@ button, .button {
   min-width: rem-calc(120);
   text-align: center;
   background: transparent;
-  border: 1px solid $light-gray;
+  border: rem-calc(1) solid $light-gray;
   border-radius: rem-calc(3);
   color: $black;
   line-height: 1;
   font-weight: 600;
   font-size: rem-calc(12);
-  letter-spacing: rem-calc(.51);;
+  letter-spacing: rem-calc(.51);
   transition: border-color $transition, color $transition, background-color $transition;
   &:after {
     content: '';

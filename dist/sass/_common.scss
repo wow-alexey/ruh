@@ -380,6 +380,7 @@ footer {
       margin-bottom: rem-calc(0);
     }
     .logo {
+      padding: 0;
       @include breakpoint(medium) {
         margin-right: rem-calc(35);
       }
@@ -407,7 +408,6 @@ footer {
       }
     }
   }
-
 }
 
 .people-holder {
@@ -537,7 +537,7 @@ footer {
 
 .clients {
   margin-top: rem-calc(30);
-  >.title {
+  > .title {
     font-weight: 600;
     font-size: rem-calc(17);
     text-transform: uppercase;
@@ -607,7 +607,7 @@ footer {
   text-align: center;
   margin-top: rem-calc(30);
   margin-bottom: rem-calc(10);
-  @include breakpoint(medium){
+  @include breakpoint(medium) {
     text-align: left;
   }
   li {
@@ -632,10 +632,10 @@ footer {
         border-color: $black;
       }
     }
-    &+li {
+    & + li {
       margin-left: rem-calc(-5);
     }
-    >*{
+    > * {
       display: inline-block;
       border: rem-calc(1) solid $gray;
       line-height: rem-calc(28);
@@ -666,6 +666,81 @@ footer {
       border-left: rem-calc(1) solid $black;
       border-bottom: rem-calc(1) solid $black;
       transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+}
+
+.langs-holder {
+  text-transform: uppercase;
+  margin-right: rem-calc(15);
+  border: rem-calc(1) solid $light-gray;
+  text-align: center;
+  background: transparent;
+  border-radius: rem-calc(3);
+  font-size: rem-calc(12);
+  position: relative;
+  cursor: pointer;
+  &.active {
+    .current-lang {
+     box-shadow: $box-shadow;
+    }
+    .langs {
+     box-shadow: $box-shadow;
+    }
+  }
+  .current-lang {
+    padding: rem-calc(8 13);
+    font-weight: 700;
+    transition: box-shadow $slow-transition;
+    &:hover {
+     box-shadow: $box-shadow;
+    }
+    @include breakpoint(large) {
+      padding: rem-calc(13 18);
+    }
+    &:after {
+      display: none;
+    }
+  }
+  .langs {
+    display: none;
+    position: absolute;
+    top: rem-calc(27);
+    left: rem-calc(-1);
+    width: 100%;
+    border: rem-calc(1) solid $light-gray;
+    border-radius: rem-calc(3);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background: $white;
+    box-sizing: content-box;
+    transition: box-shadow $slow-transition;
+    @include breakpoint(large) {
+      top: rem-calc(37);
+    }
+    li {
+      width: 100%;
+      display: inline-block;
+      border: 0;
+      & + li {
+        margin-left: 0;
+      }
+    }
+    .active {
+      display: none;
+    }
+  }
+  a {
+    width: 100%;
+    border: 0;
+    padding: rem-calc(10 0);
+    font-size: rem-calc(12);
+    transition: background-color $transition;
+    &:hover {
+      background: $gray;
+    }
+    @include breakpoint(large) {
+      padding: rem-calc(13 0);
     }
   }
 }

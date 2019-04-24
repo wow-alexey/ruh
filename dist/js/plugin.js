@@ -12,23 +12,26 @@ $('nav a').on('click', function () {
 //accordion
 $('.accordion').click(function(e) {
     e.preventDefault();
-
     var $this = $(this);
     $('.accordion').removeClass('opened');
-
-
     if ($this.next().hasClass('show')) {
         $this.next().removeClass('show');
         $this.next().slideUp(350);
     } else {
-        $('.panel').removeClass('show');
-        $('.panel').slideUp(350);
+        $('.panel').removeClass('show').slideUp(350);
         $this.parent().parent().find('li .panel').removeClass('show');
         $this.parent().parent().find('li .panel').slideUp(350);
         $this.toggleClass('opened');
         $this.next().toggleClass('show');
         $this.next().slideToggle(350);
     }
+});
+
+// Lang accordion
+$('.lang-accordion').click(function(e) {
+    e.preventDefault();
+    $('.lang-panel').toggleClass('opened').slideToggle(350);
+    $('.langs-holder').toggleClass('active');
 });
 
 function appendHtml() {

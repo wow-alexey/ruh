@@ -180,10 +180,9 @@
 .tabs {
   display: none;
   @include breakpoint(medium) {
-    display: block;
+    display: block !important;
   }
   li {
-    padding: rem-calc(9 25);
     border-bottom: rem-calc(1) solid $gray;
     text-align: left;
     cursor: pointer;
@@ -192,7 +191,6 @@
     @include breakpoint(medium) {
       position: relative;
       border: rem-calc(1) solid $gray;
-      padding: rem-calc(12 10 12 33);
       font-size: rem-calc(17);
     }
     &:hover {
@@ -209,6 +207,7 @@
         background: $light-gray;
         display: block;
         cursor: auto;
+        padding: rem-calc(12 10 12 33);
       }
       &:before {
         @include breakpoint(medium) {
@@ -221,6 +220,14 @@
           background: $black;
         }
       }
+    }
+  }
+  a {
+    display: inline-block;
+    width: 100%;
+    padding: rem-calc(9 25);
+    @include breakpoint(medium) {
+      padding: rem-calc(12 10 12 33);
     }
   }
 }
@@ -254,7 +261,6 @@
         > a:focus {
           cursor: default;
           background-color: $white;
-
         }
       }
     }

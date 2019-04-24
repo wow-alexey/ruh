@@ -19,10 +19,10 @@
     }
   }
   .achievements {
-    //margin-top: rem-calc(15);
+    margin-top: rem-calc(15);
     overflow: auto;
     @include breakpoint(medium) {
-      //margin-top: rem-calc(45);
+      margin-top: rem-calc(0);
       height: rem-calc(400);
     }
     @include breakpoint(xlarge) {
